@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Edible Flowers</title>
+    <style>
+        body{
+            background: linear-gradient(to bottom right, rgb(192, 175, 207), rgb(68, 33, 100));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            margin: 0;
+        }
+        h1, h2, h4, p {
+            text-align: center;
+        }
+        h1{
+            color: brown;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin-bottom: 10px;
+        }
+        h2{
+            font-size: large;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(51, 2, 2);
+            margin: 10px 0;
+        }
+        span{
+            font-weight: bold;
+        }
+        .wrapper{
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+            width: 100%;
+        }
+        div{
+            text-align: center;
+            margin: 0;
+        }
+        a{
+            text-decoration: none;
+            color: rgb(51, 2, 2);
+            font-weight: bold;
+        }
+        img{
+            width: 300px;
+            height: 230px;
+            border-radius: 10px;
+            box-shadow: 0 8px 8px 0;
+            margin: 5px;
+        }
+        button{
+            display: block;
+            background: white;
+            color: rgb(187, 14, 109);
+            margin: 20px auto;
+            padding: 10px;
+            font-weight: 700;
+            border-radius: 30px;
+            border: solid 2px rgb(187, 14, 109);
+            transition: all 500ms ease;
+        }
+        button:hover{
+            background: rgb(187, 14, 109);
+            color: white;
+            cursor: pointer;
+            border: solid 2px rgb(187, 14, 109);
+        }
+    </style>
+</head>
+<body>
+    <h1>What's your favorite edible flower?</h1>
+    <hr>
+    <h2>History or Recipe? <span></span></h2>
+    <h4>Click on a <em>flower</em> to make your choice</h4>
+    <div class="wrapper">
+        <div>
+            <a id="viola-link" href="https://creativecanning.com/pansy-jelly/" target="_blank">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/409/original/violas_and_pansies.png?1724967623"
+                alt="Violas and Pansies" onclick="choice('viola-link', 'https://specialtyproduce.com/produce/Pansy_Flowers_31811.php')">
+                <br>Violas and Pansies
+            </a>
+        </div>
+        <div>
+            <a id="squash-link" href="https://whisperofyum.com/post/stuffed-squash-blossoms/" target="_blank">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/408/original/squash_blossoms.png?1724967605"
+                alt="Squash Blossoms" onclick="choice('squash-link', 'https://specialtyproduce.com/produce/Squash_Macho_Blossoms_411.php')" ti>
+                <br>Squash Blossoms
+            </a>
+        </div>
+        <div>
+            <a id="roses-link" href="https://homegardenandhomestead.com/garden-roses-queen-of-edible-flowers/" target="_blank">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/407/original/roses.png?1724967559"
+                alt="Roses" onclick="choice('roses-link', 'https://criatura-shop.com/en/blogs/news/as-rosas-uma-flor-comestivel')">
+                <br>Roses
+            </a>
+        </div>
+        <div>
+            <a id="nasturtium-link" href="https://www.food.com/recipe/stuffed-nasturtium-flowers-126169" target="_blank">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/406/original/nasturtium.png?1724967482"
+                alt="Nasturtiums" onclick="choice('nasturtium-link', 'https://growingspaces.com/nasturtiums/')">
+                <br>Nasturtiums
+            </a>
+        </div>
+        <div>
+            <a id="marigolds-link" href="https://baileyvantassel.com/cooking-with-edible-flowers-9-marigold-recipes/" target="_blank">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/405/original/marigolds.png?1724967432"
+                alt="Marigolds" onclick="choice('marigolds-link', 'https://specialtyproduce.com/produce/Marigold__MicroFlowers_3837.php')">
+                <br>Marigolds
+            </a>
+        </div>
+        <div>
+            <a id="lavenders-link" href="https://heartbeetkitchen.com/dried-lavender-simple-syrup/" target="_blank">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/404/original/lavender.png?1724967418"
+                alt="Lavenders" onclick="choice('lavenders-link', 'https://foodprint.org/real-food/lavender/')">
+                <br>Lavenders
+                </a>
+        </div>
+        <div>
+            <a id="chamomile-link" href="https://www.yummly.com/recipe/Chamomile-Muffins-_Paleo_-2571713" target="_blank">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/403/original/chamomile.png?1724967407"
+                alt="Chamomile" onclick="choice('chamomile-link', 'https://specialtyproduce.com/produce/Fresh_Chamomile_8324.php')">
+                <br>Chamomile
+            </a>
+        </div>
+        <div>
+            <a id="calendula-link" href="https://shesrootedhome.com/calendula-salve/" target="_blank">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/402/original/calendula.png?1724967394"
+                alt="Calendula" onclick="choice('calendula-link', 'https://greensideup.ie/calendula-officinalis/')"">
+                <br>Calendula
+            </a>
+        </div>
+        <div>
+            <a id="anise-link" href="https://www.crumbblog.com/i-scream-you-scream-blueberry-hyssop/" target="_blank">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/401/original/Anise_hyssop.png?1724967380"
+                alt="Anise Hyssop" onclick="choice('anise-link', 'https://specialtyproduce.com/produce/Anise_Hyssop_8942.php')">
+                <br>Anise Hyssop
+            </a>
+        </div>
+        <div>
+            <a id="butterfly-pea-link" href="https://www.cookingwithnart.com/butterfly-pea-tea-blue-tea/#recipe" target="_blank">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/400/original/butterfly_pea.png?1724967362"
+                alt="Butterfly Pea" onclick="choice('butterfly-pea-link', 'https://littleflowerhut.com.sg/flower-guide/butterfly-pea/')">
+                <br>Butterfly Pea
+            </a>
+        </div>
+    </div>
+
+    <p>
+        Coded by <strong>Thobeka Guma </strong>😄
+    </p>
+    <footer>
+        <a href="https://www.linkedin.com/in/thobekaguma" target="_blank">
+            <button>
+            Connect with me
+        </button>
+        </a>
+
+    </footer>
+
+    <script>
+        function choice(anchorId, newHref){
+            let choice = prompt("Type 'h' for history, 'r' for a recipe of the selected flower").toLowerCase().trim();
+            let anchor = document.getElementById(anchorId);
+
+            if (choice === 'h'){
+                event.preventDefault();
+                anchor.href = newHref;
+                anchor.click();
+            }
+
+            else if (choice === 'r'){
+
+            }
+            else{
+                alert('Invalid choice')
+                event.preventDefault();
+            }
+        }
+    </script>
+</body>
+</html>

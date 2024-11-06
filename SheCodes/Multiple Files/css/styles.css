@@ -1,0 +1,26 @@
+body {
+    text-align: center;
+}
+h1{
+    color: white;
+    background: blueviolet;
+    border-radius: 5px;
+    text-align: center;
+    padding: 0 auto;
+}
+img {
+    height: 50px;
+    width: 50px;
+}
+input[type=submit] {
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+label {
+    font-weight: 600;
+}
